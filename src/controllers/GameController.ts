@@ -27,7 +27,7 @@ export class GameController{
       const response = await serviceGame.processGame(id);
       res.status(200).send(response);
     }catch(error){
-      res.status(500).send('error here');
+      res.status(500).send('Error here');
     }
   }
 
