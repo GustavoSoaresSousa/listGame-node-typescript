@@ -2,12 +2,11 @@
   "App": {
     "port": 8080,
     "database": {
-      "mongoUrl": "MONGODB_URL"
+      "mongoUrl": "mongodb+srv://gustavo:claudio10@cluster0.jrc9o.mongodb.net/games?retryWrites=true&w=majority"
     },
     "auth": {
-      "key": "JWT_SECRET_KEY",
+      "key": "some-key",
       "tokenExpiresIn": "2000000000"
-    },
-    "FLY_ACCESS_TOKEN": "JWT_SECRET_KEY"
+    }
   }
 }

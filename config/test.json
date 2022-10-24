@@ -1,8 +1,15 @@
 {
   "App": {
-    "database": {
-      "mongoUrl": "MONGODB_URL"
+    "resources": {
+      "StormGlass": {
+        "apiToken": "test-token"
+      }
     },
-    "FLY_ACCESS_TOKEN": "FLY_ACCESS_TOKEN"
+    "database": {
+      "mongoUrl": "mongodb+srv://gustavo:claudio10@cluster0.jrc9o.mongodb.net/games?retryWrites=true&w=majority"
+    },
+    "logger": {
+      "enabled": false
+    }
   }
 }

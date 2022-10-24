@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import * as database from './database';
 import { GameController } from './controllers/GameController';
 import { UserController } from './controllers/userController';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export class SetupServer extends Server {
   constructor(private port = 8080) {
@@ -19,6 +21,7 @@ export class SetupServer extends Server {
   private setupExpress(): void {
     this.app.use(bodyParser.json());
     this.setupControllers();
+
   }
 
   private setupControllers(): void {
