@@ -1,0 +1,8 @@
+{
+  "App": {
+    "database": {
+      "mongoUrl": "MONGODB_URL"
+    },
+    "FLY_ACCESS_TOKEN": "FLY_ACCESS_TOKEN"
+  }
+}

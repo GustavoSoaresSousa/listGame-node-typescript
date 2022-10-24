@@ -1,0 +1,13 @@
+{
+  "App": {
+    "port": 8080,
+    "database": {
+      "mongoUrl": "MONGODB_URL"
+    },
+    "auth": {
+      "key": "JWT_SECRET_KEY",
+      "tokenExpiresIn": "2000000000"
+    },
+    "FLY_ACCESS_TOKEN": "JWT_SECRET_KEY"
+  }
+}
