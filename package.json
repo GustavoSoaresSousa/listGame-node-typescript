@@ -1,0 +1,49 @@
+{
+  "name": "apitransport",
+  "version": "1.0.0",
+  "description": "Books API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "start:dev": "ts-node-dev src/index.ts",
+    "start:local": "ts-node-dev --transpile-only src/index.ts",
+    "test:functional": "jest --projects ./test --runInBand",
+    "test:unit": "jest"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "api"
+  ],
+  "author": "Gustavo Soares",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/config": "^3.3.0",
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.0.3",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^16.0.0",
+    "@types/node-cache": "^4.2.5",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.0.3",
+    "supertest": "^6.2.4",
+    "ts-jest": "^29.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@overnightjs/core": "^1.7.6",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.8",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.1.4",
+    "node-cache": "^5.1.2"
+  }
+}

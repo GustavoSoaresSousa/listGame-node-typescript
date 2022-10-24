@@ -1,0 +1,36 @@
+{
+	"id": 470,
+	"title": "Hyper Scape",
+	"thumbnail": "https:\/\/www.freetogame.com\/g\/470\/thumbnail.jpg",
+	"status": "Offline",
+	"short_description": "A futuristic urban battle royale game with powerful hacks and unique weapons!",
+	"description": "The battle rages in Neo Arcaida, a massive virtual city where champions fight through the streets and buildings and across the rooftops of Ubisoft’s battle royale, Hyper Scape. Champions use both traditional projectile weapons and special hack abilities in combat. Hacks are picked up via loots and include healing, invisibility walls, mines, and more. Several of them take advantage of the game’s emphasis on verticality.\r\n\r\nIn Hyper Scape, there are two ways to win. The first is to fight until you’re the last one standing. The second is to capture a crown that spawns near the end of a match and hold onto it long enough to claim victory. The game also boasts a Twitch extension by the name of “Crowncast” that allows players to vote on game-changing effects that impacts all players in the match, giving viewers the opportunity to change the outcome of the game. \r\n\r\nThe game is available to play on PC Xbox One and PlayStation 4.",
+	"game_url": "https:\/\/www.freetogame.com\/open\/hyper-scape",
+	"genre": "Shooter",
+	"platform": "Windows",
+	"publisher": "Ubisoft",
+	"developer": "Ubisoft",
+	"release_date": "2020-07-12",
+	"freetogame_profile_url": "https:\/\/www.freetogame.com\/hyper-scape",
+	"minimum_system_requirements": {
+		"os": "Windows 7 and up",
+		"processor": "Intel Core i3 3220 or AMD FX-4130",
+		"memory": "6 GB",
+		"graphics": "GPU Nvidia GTX 660 or AMD Radeon HD 7870 with 2 GB dedicated VRAM",
+		"storage": "20 GB"
+	},
+	"screenshots": [
+		{
+			"id": 1176,
+			"image": "https:\/\/www.freetogame.com\/g\/470\/hyper-scape-1.jpg"
+		},
+		{
+			"id": 1177,
+			"image": "https:\/\/www.freetogame.com\/g\/470\/hyper-scape-2.jpg"
+		},
+		{
+			"id": 1178,
+			"image": "https:\/\/www.freetogame.com\/g\/470\/hyper-scape-3.jpg"
+		}
+	]
+}

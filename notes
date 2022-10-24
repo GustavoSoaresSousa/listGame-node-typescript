@@ -1,0 +1,7 @@
+toEqual - Útil para verificar objetos e suas propriedades
+toBeFalsy - Útil para verificar valores que podem ser convertidos para false por meio da coerção do JavaScript.
+toBeTruthy - Útil para verificar valores que podem ser convertidos para true por meio da coerção do JavaScript.
+toContain - Útil para verificar arrays com valores primitivos.
+toContainEqual - Útil para verificar arrays com objetos.
+toMatch - Útil para verificar strings e expressões regulares (Regex).
+toThrow - Útil para verificar se uma função lançou uma exceção.
