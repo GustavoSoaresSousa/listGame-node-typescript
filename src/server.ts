@@ -1,8 +1,9 @@
 import './util/module-alias';
 import { Server } from '@overnightjs/core';
-import { Application, Request, Response } from 'express';
+import { Application, NextFunction, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import * as database from './database';
+import cors from 'cors'
 import { GameController } from './controllers/GameController';
 import { UserController } from './controllers/userController';
 import dotenv from 'dotenv';
@@ -20,6 +21,7 @@ export class SetupServer extends Server {
 
   private setupExpress(): void {
     this.app.use(bodyParser.json());
+    this.app.use(cors({origin: '*'}))
     this.setupControllers();
 
   }

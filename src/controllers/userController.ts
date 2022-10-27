@@ -1,7 +1,7 @@
 import { User } from "../model/userModel";
 import { Get, Controller, Post, Middleware, ClassMiddleware } from "@overnightjs/core";
 import { Request, Response } from "express";
-import { AuthService } from "@src/services/auth";
+import { AuthService } from "../services/auth";
 
 @Controller('users')
 export class UserController{
