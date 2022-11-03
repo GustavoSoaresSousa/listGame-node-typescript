@@ -3,6 +3,7 @@ import { GameModel } from "../../src/model/gameModel";
 import { User } from "../../src/model/userModel";
 import { AuthService } from "../../src/services/auth";
 import bodyExpect from '../fixtures/dataSpecificGame.json';
+jest.setTimeout(20000);
 
 describe('Game functional tests', () => {
   const defaultUser = {
@@ -11,7 +12,6 @@ describe('Game functional tests', () => {
     password: '1234',
   };
   let token: string;
-
   beforeEach(async () => {
     await GameModel.deleteMany({});
     await User.deleteMany({});
@@ -29,7 +29,6 @@ describe('Game functional tests', () => {
   it('return game if request for successifuly' , async() => {
     const id = 475
     const { status, body } = await global.testRequest.post('/gameList/game').send({ id: 475});
-    console.log(body)
     expect(status).toBe(200);
     expect(body).toEqual([bodyExpect]);
   });
@@ -48,5 +47,15 @@ describe('Game functional tests', () => {
     const { status, body } = await global.testRequest.get('/gameList/getFavs').set({'x-access-token': token});
     expect(status).toBe(200);
     expect(body).toEqual([bodyExpect]);
+  })
+
+  it('return true if fav deleted', async () => {
+    const gameWillToDelete = {
+      id: 475,
+      title: 'Genshin Impact'
+    }
+    const { status, body } = await global.testRequest.post('/gameList/deleteFav').set({'x-access-token': token}).send(gameWillToDelete);
+    expect(status).toBe(200);
+    expect(body).toBeTruthy();
   })
 })

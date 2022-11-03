@@ -3,7 +3,7 @@ import { authMiddleware } from '../middleware/auth';
 import { Request, Response } from 'express';
 import { ServiceGame } from '../services/serviceGame';
 import { GameAPI, ResponseGame } from '../clients/GameAPI';
-import { GameModel } from '../model/gameModel';
+import { Game, GameModel } from '../model/gameModel';
 
 
 const serviceGame = new ServiceGame();
@@ -25,7 +25,7 @@ export class GameController{
     try{
       const { id } = req.body;
       const response = await serviceGame.processGame(id);
-      res.status(200).send(response);
+      res.status(200).send([response]);
     }catch(error){
       res.status(500).send('Error here');
     }
@@ -59,18 +59,14 @@ export class GameController{
   }
 
   @Middleware(authMiddleware)
-  @Delete('deleteFav/:id')
+  @Post('deleteFav')
   public async deleteOne(req: Request ,res: Response): Promise<void> {
     try{
-      const id = req.params.id;
-      if(!id){
-        res.status(404).send('Not exists nothing for id informed');
-      }
-      const result = await GameModel.findByIdAndDelete(id);
-      res.send(200).send('fav deleted');
+      const gameModel = await GameModel.findOneAndDelete({...req.body, ...{user: req.decoded?.id}})
+      const result = await gameModel?.save();
+      res.status(200).send(true);
     }catch(err){
       res.send(500).send('There error here');
     }
   }
-
 }
